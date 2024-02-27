@@ -1,0 +1,522 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+}
+.flex {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex2 {
+	display: -webkit-flex;
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+div.hamburgerMenu {
+	  background-color: green;
+	  width: 40%;
+	  padding-left: 10px;
+	  height: 102vh;
+	  position: fixed;
+	  color: white;
+	  z-index: 1;
+	  top: -10%;
+	  right: -550px;
+	  margin-top: 60px;
+	  transition: 2s;
+  }
+  div.hamburgerMenu * {
+	color: white;
+  }
+  .first-child {
+	margin-top: 100px;
+  } 
+.center {
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+    background-color: green;
+	color: white;
+	font-weight: 700;
+}
+a {
+	text-decoration: none;
+}
+main, header {
+	margin: 20px 80px;
+}
+
+main.wrap {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+/*------HEADER------------*/
+
+
+.underline {
+	border-top: 1px solid hsl(220, 14%, 75%);
+	width: 100%;
+	margin: 5px auto;
+}
+i.fa-bars, .next, .previous, .icon-close {
+	display:none;
+	cursor: pointer;
+}
+.navigations *, .cart *{
+	margin: 30px 5px;
+	color: hsl(219, 9%, 45%);
+}
+.hamburgerAbout * {
+	color: white;
+}
+.ciouz-logo {
+	font-size: 2rem;
+    color: green;
+	font-weight: 700;
+    max-width: 150px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.Login {
+    margin-right: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+.Login:active {
+    opacity: .5;
+}
+/*----------------HOME-----------------*/
+
+.border-radius {
+    border-radius: 50%;
+    animation: rotate 8s linear 3s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+h1 {
+    font-size: 5rem;
+	color: black;
+}
+.home * {
+	color: black;
+}
+ .home div h2 {
+	max-width: 400px;
+	line-height: 2rem;
+ }
+/**********ABOUT-US************/
+
+.about-us {
+    max-width: 1000px;
+}
+/**********MENU************/
+.wrap {
+    flex-wrap: wrap;
+}
+main.menus {
+    background-color: hsl(219, 9%, 45%);
+	margin: auto 0px;
+	padding: 25px;
+}
+.menu {
+    background-color: white
+}
+.menu * {
+	padding: 20px auto;
+}
+.view-food {
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+article.menu {
+    width: 23%;
+    max-width: 300px;
+    min-width: 200px;
+    min-height: 80vh;
+    padding: 20px 30px;
+    margin: 10px 0px;
+}
+article.menu img{
+	width: 100%;
+}
+.company-name {
+	margin-top: 10px;
+}
+.food-error {
+	color: red;
+}
+.p-125::before {
+    content: "NGN";
+}
+.error {
+    color: red;
+	margin-bottom: 20px;
+}
+
+/********PROFILE********/
+.welcome {
+	margin-bottom: 100px;
+}
+.name {
+	margin-top: 20px;
+}
+.price {
+	margin: 20px 0px;
+}
+
+/**********FORM************/
+
+.form-container form {
+	width: 100%;
+}
+
+.label {
+	margin: 30px auto;
+}
+.form-container.form div.label input {
+	width: 100%;
+}
+.label input{
+	padding: 5px 40px;
+}
+
+/*---------------SINGLE MENU----------------*/
+
+/*--------------Images part-------------------*/
+
+.images-part, .description-part {
+	width: 50%;
+}
+.product-1 img, .shoe-slides img{
+	width: 80%;
+	min-height: 80vh;
+	border-radius: 15px;
+	margin-top: 100px;
+	margin-bottom: 25px;
+}
+.section {
+	margin: 20px;
+}
+.products img {
+	width: 16%;
+	border-radius: 10px;
+	margin-right: 25px;
+    cursor: pointer;
+}
+.products img:hover {
+	opacity: .6;
+	border: 3px solid green;
+}
+.shoe-slides img {
+	display: none;
+}
+.slide1 {
+	display: none;
+}
+
+
+/*-------------Description part-------------------*/
+.description-part {
+	margin-top: 50px;
+}
+
+
+.description-part h3 {
+	color: green;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-bottom: 20px;
+}
+.description-part h1 {
+	font-size: 2.5rem;
+	max-width: 400px;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+.description-part > p {
+	max-width: 450px;
+	margin-bottom: 20px;
+	color: hsl(219, 9%, 45%);
+}
+/* section.section div.description-part div.125 { */
+
+.par {
+	margin-bottom: 10px;
+}
+.cart-down {
+    margin-top: 30px;
+	width: 45%;
+}
+.minus-plus {
+	background-color: hsl(223, 64%, 98%);
+	padding: 10px 20px;
+	width: 100%;
+	margin-right: 20px;
+	border-radius: 5px;
+	height: 8vh;
+}
+.plus, .minus {
+    cursor: pointer;
+}
+.zero {
+	background-color: hsl(223, 64%, 98%);
+	width: 80%;
+	margin-left: 45%;
+	border-style: none;
+}
+.order-button {
+	min-width: 120px;
+	height: 8vh;
+}
+.button {
+	margin-left: 20px;
+}
+#location, .food-price {
+	font-weight: 700;
+	font-size: 1rem;
+	border-style: none;
+}
+
+#location:focus, .food-price:focus, input.zero:focus {
+	outline-width: 0;
+}
+.btn {
+	padding: 15px 20px;
+	border-radius: 5px;
+	border-style: none;
+	background-color: green;
+    cursor: pointer;
+}
+.view-food {
+	padding: 15px 20px;
+	border-radius: 5px;
+	border-style: none;
+	background-color: green;
+    cursor: pointer;
+}
+
+.fa-times {
+	color: white;
+	z-index: 4;
+	/*position: absolute;
+	top: 0px;
+	left: 0px;*/
+}
+/*
+class="p-125"
+ */
+@media screen and (max-width:767px) {
+	/********Header*********/
+	
+i.fa-bars {
+	display:inline-block;
+}
+	/*.icon-close {
+		position: fixed;
+		top: 5%;
+		right: 10%;
+		z-index: 2;
+		margin-bottom: 10px;
+		animation: 3s ease-out 0s 1 slideInLeft2;
+	}*/
+	
+	header {
+		margin: -40px 20px;
+	}
+	.navigations {
+		display: none;
+	}
+	.ciouz-logo {
+		margin-right: 100px;
+	}
+	.underline {
+		width: 10%;
+		display: inline;
+	}
+	.add-to-menu {
+		display: none;
+	}
+	.products img {
+		display: none;
+	}
+  
+  
+	  /*@keyframes slideInRight {
+		0% {
+		  transform: translateX(0);
+		}
+		100% {
+		  transform: translateX(100%);
+		}
+	  }*/
+
+	  hr {
+		width: 80%;
+	  }
+	  .login-nav {
+		margin-top: 0px;
+	  }
+/************Home**********/
+	.home {
+		margin-top: 100px;
+	display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+	.border-radius {
+		margin-top: 20px;
+		width: 70%;
+	}
+	main *{
+		color: black
+	}
+	/*.home div {
+		padding: 50px;
+	}*/
+	.underline {
+		width: 150%;
+	}
+	.images-part {
+		width: 100%;
+	}
+
+	/********Form********/
+	.label {
+		margin-top: 30px;
+	}
+	.label-margin {
+		margin-bottom: 25px;
+	}
+	
+main > * {   
+    text-align: center;
+}
+/******MENU*********/
+
+.view-food {
+	margin-right: 10px;
+	flex-direction: column;
+	margin-left: 10px;
+}
+article.menu {
+    width: 23%;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 600px;
+    padding: 20px 30px;
+    margin: 10px 0px;
+}
+
+section.flex {
+	flex-direction: column;
+}
+.images-part {
+	margin-bottom: 40px;
+}
+.par {
+	margin: center;
+}
+
+.about-us {
+    flex-direction: column;
+}
+.span {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.description-part > p {
+	max-width: 450px;
+}
+#location {
+	margin-left: 5px;
+}
+
+.minus-plus {
+	width: 250%;
+	margin-right: 20px;
+	border-radius: 5px;
+	height: 8vh;
+}
+.plus, .minus {
+    cursor: pointer;
+}
+.zero {
+	background-color: hsl(223, 64%, 98%);
+	width: 130%;
+	margin-left: 30%;
+	border-style: none;
+}
+.cart-down {
+	width: 110%;
+}
+
+.food-price-p {
+	min-width: 125px;
+}
+}
+
+
+
+/*@media screen and (max-width:600px) {
+	.slide1 {
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 80vh;
+	}
+	.slide1 img {
+		margin: auto 5px;
+	}
+}*/
+@media screen and (max-width:400px) {
+
+	.underline {
+		width: 10%;
+	}
+	h1 {
+		max-width: 900px;
+		font-size: 1.8rem;
+	}
+	.description-part > p {
+	max-width: 400px;
+	width: 90%;
+	}
+
+	.images-part {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+

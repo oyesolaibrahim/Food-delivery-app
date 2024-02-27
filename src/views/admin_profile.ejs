@@ -1,0 +1,24 @@
+<%- include("./layouts/header") %>
+    <main class="menus">
+        <h2 class="welcome"><%= profile.firstName %> <%= profile.lastName %>'s Profile</h2>
+        
+        <h2>Menu</h2>
+        <section class="flex wrap">
+            
+         <% menus.forEach(function(menu, index) { %>
+            
+            <article class="menu">
+                <img src="<%= menu.imageUrl %>" alt="">
+                <h3 class="name"><%= menu.name %></h3>
+                <div class="flex">
+                    <p class="price"><%= menu.price %></p>
+                    <p class="category"><%= menu.category.charAt(0).toUpperCase() + menu.category.slice(1) %></p>
+                </div>
+                <h3 class="price"><%= menu.company %></h3>                
+                <a class="view-food btn center" href="/menus/<%= menu._id %>">View Food</a>
+            </article>
+            <%  }) %>
+        </section>
+        </main>
+    <%- include("./layouts/footer") %>
+    

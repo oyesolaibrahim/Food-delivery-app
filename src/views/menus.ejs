@@ -1,0 +1,22 @@
+
+<%- include("./layouts/header.ejs") %>
+<main class="flex wrap menus">
+    <% menus.forEach(function(menu, index) { %>
+    <article class="menu">
+        <img src="<%= menu.imageUrl %>" alt="">
+        <h3><%= menu.name %></h3>
+        <div class="">
+            <p class="price"><%= menu.price %> </p>
+            <p class="category"><%= menu.category.charAt(0).toUpperCase() + menu.category.slice(1) %> </p> <!--charAt(0).toUpperCase() + product.category.slice(1)-->
+        </div>
+        <h4 class="company-name"> <%= menu.company %> </h4>
+        <div class="flex">
+            <a class="Login view-food" href="/menus/<%= menu._id %>">View Food</a>
+            <% if(userSession) {  %>
+            <a class="Login view-food center" href="/menus/<%= menu._id %>/order">Order Food</a>
+            <% } %>
+        </div>
+    </article>
+    <%  }) %>
+</main>
+<%- include("./layouts/footer") %>

@@ -1,0 +1,92 @@
+
+        <%- include("./layouts/header") %>
+        <main>
+            <section class="flex section">
+                <div class="images-part">
+                        <div class="slide1 flex">
+                            <!--<div class="pre">
+                            </div>
+                            <div class="nextus">
+                            </div>-->
+                            <img class="previous2" src="images/icon-previous.svg" alt="previous-img" onclick="previous()"/>
+                            <img class="next2" src="images/icon-next.svg" alt="next-img" onclick="next()"/>
+                        </div>
+                        <div class="slide2">
+                            <img class="previous" src="images/icon-previous.svg" alt="previous-img" onclick="previous()"/>
+                            <img class="next" src="images/icon-next.svg" alt="next-img" onclick="next()"/>
+                        </div>
+                        <div class="slide3">
+                            <img class="previous" src="images/icon-previous.svg" alt="previous-img" onclick="previous()"/>
+                            <img class="next" src="images/icon-next.svg" alt="next-img" onclick="next()"/>
+                        </div>
+                        <div class="slide4">
+                            <img class="previous" src="images/icon-previous.svg" alt="previous-img" onclick="previous()"/>
+                            <img class="next" src="images/icon-next.svg" alt="next-img" onclick="next()"/>
+                        </div>
+                    <div class="product-1">
+                        <img src="<%= menu.imageUrl %>" alt="menu"/>
+    
+                            
+                        <div class="flex next-previous">
+                            <img class="previous" src="images/icon-previous.svg" alt="previous-img" onclick="previous()"/>	
+                            <img class="next" src="images/icon-next.svg" alt="next-img" onclick="next()"/>
+                        
+                        </div>
+                    </div>
+                    <div class="shoe-slides">
+                        <img class="product1" src="<%= menu.image1Url %>" alt=""/>
+                        <img class="product2" src="<%= menu.image2Url %>" alt=""/>
+                        <img class="product3" src="<%= menu.image3Url %>" alt=""/>
+                        <img class="product4" src="<%= menu.imageUrl %>" alt=""/>
+                    </div>
+                    
+                    
+                    <div class="products">
+                        <img src="<%= menu.image1Url %>" alt="product-1" onclick="product1()"/>
+                        <img src="<%= menu.image2Url %>" alt="product-2" onclick="product2()"/>
+                        <img src="<%= menu.image3Url %>" alt="product-3" onclick="product3()"/>
+                        <img src="<%= menu.imageUrl %>" alt="product-4" onclick="product4()"/>
+                    </div>
+                </div>
+                
+                <div class="description-part">
+                    <h3><%= menu.company %></h3>
+                    <h1> <%= menu.name %> </h1>
+                    <p class="name"> <%= menu.description %></p>
+                    <p> <%= menu.category.slice(0,1).toUpperCase() + menu.category.slice(1) %></p>
+                    <div>
+                        <div class="flex par">
+                            <div class="flex">
+                                <h2 class="p-125"><%= menu.price %></h2>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> 
+                <% if (adminSession && adminSession === menu.admin.toString()) { %>
+                    <a class="Login btn center" href="/menus/<%= menu._id %>/edit">Edit Food</a>
+                    <form action="/menus/<%= menu._id %>?_method=DELETE" 
+                        method="post" 
+                        onsubmit="return confirm('Are you sure you want to delete food')"
+                        >
+                        <button class="Login btn center price" type="submit">Delete Food</button>
+                    </form>
+                 <% } %>
+            </section>
+        </main>
+        <%- include("./layouts/footer") %>
+
+
+
+
+        <!--<article class="product">
+            <img src="<%= menu.imageUrl %>" alt="menu"/>
+            <h2><%= menu.name %></h2>
+            <h3 class="name><%= menu.company %></h3>
+            <p class="Login">NGN<%= menu.price %></p>
+            <p class="desc"><%= menu.description %></p>
+            <p class="category"><%= menu.category.slice(0,1).toUpperCase() + menu.category.slice(1) %></p>
+        
+       
+        </article>
+-->    

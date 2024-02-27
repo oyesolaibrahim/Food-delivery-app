@@ -1,0 +1,86 @@
+<%- include("./_head.ejs") %>
+<header>
+  <div class="flex header">
+    <div>
+      <div class="flex">		
+        <h3 class="ciouz-logo">Ciouz Food</h3>
+        <div class="navigations flex">
+          <p><a href="/">Home</a></p>
+          <p><a href="/about-us">About Us</a></p>
+          <p><a href="/menus">Menu</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cart flex">
+          
+      <% if (adminSession) {  %>
+        <div class="flex">
+          <a href="/admin/profile">
+           <button class="Login">Profile</button>
+          </a>
+
+          <a href="/admin/ordered">
+            <button class="Login flex">Orders</button>
+          </a>
+
+           <a href="/menus/new">
+            <button class="add-to-menu Login">Add to Menu</button>
+          </a>
+
+          <form action="/admin/logout" method="post" onsubmit="return confirm('Are you sure you want to log out')">
+            <button class="Login" type="submit">Logout</button> 
+          </form>
+        
+        
+        </div>
+
+      <% } else if(userSession) {  %>
+      <div class="flex">
+        <a href="/user/profile">
+          <button class="Login flex">Profile</button>
+        </a>
+      
+        <a href="/user/ordered">
+          <button class="Login my-orders">My Orders</button>
+        </a>
+        
+        <form action="/admin/logout" method="post" onsubmit="return confirm('Are you sure you want to log out')">
+          <button class="Login" type="submit">Logout</button> 
+        </form>
+      </div>
+      <%  }else { %>
+        <div class="flex">    
+          <a href="/user/login">
+              <button class="Login">Login</button>
+          </a>
+          <a href="/signup">
+              <button class="Login">Signup</button>
+          </a>
+        </div>
+      <% } %>
+    <!--<img class="hamburger" src="../../images/icon-menu.svg" alt="hamburger-img" onclick="navBar()"/>
+    -->
+    <i class="fa fa-bars fa-2x" onclick="navBar()" aria-hidden="true"></i>
+    <!--<img class="hamburger" src="../images/icon-hamburger.svg" onclick="navBar()" alt=""/>
+    -->
+    <div class="hamburgerMenu">
+        <i class="fa fa-times icon-close fa-2x" onclick="navBarClose()" aria-hidden="true"></i>
+        <p class="first-child"><a href="/">Home</a></p>
+        <p><a href="/about-us">About Us</a></p>
+        <p><a href="/menus">Menu</a></p>
+        <% if (adminSession) {  %>
+       <p> <a href="/menus/new">Add to Menu</a></p>
+          <% } %>
+          <hr>
+          <a href="/user/login">
+            <button class="Login login-nav">Login</button>
+        </a>
+        <a href="/signup">
+            <button class="Login login-nav">Signup</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="underline"></p>
+</header>
